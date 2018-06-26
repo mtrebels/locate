@@ -1,15 +1,20 @@
-// locate common elements within given arrays
+// locate common elements within given
 
-function arraysInCommon(arrays) { // define function to iterate over arrays
+// define function to iterate over arrays
+
+function arraysInCommon(arrays) {
     var i, common,
-        L = arrays.length, min = Infinity; // minimum length array
-    while (L) { 
-        if (arrays[--L].length < min) { // iterate minumum array to prevent dupilcates
+        // define minimum length array
+        L = arrays.length, min = Infinity; 
+    while (L) {
+        // iterate minumum array to prevent dupilcate
+        if (arrays[--L].length < min) {
             min = arrays[L].length;
             i = L;
         }
     }
-    common = arrays.splice(i, 1)[0]; // return common elements 
+    // return common elements starting from index zero
+    common = arrays.splice(i, 1)[0]; 
     return common.filter(function (itm, indx) {
         if (common.indexOf(itm) == indx) {
             return arrays.every(function (arr) {
@@ -19,7 +24,7 @@ function arraysInCommon(arrays) { // define function to iterate over arrays
     });
 }
 
-// first set of define the arrays 
+// first set of defined arrays 
 // common elements are [23,566]
 
 //var arr1 = [23, 34, 67, 89, 123, 566, 1000];
@@ -30,6 +35,7 @@ function arraysInCommon(arrays) { // define function to iterate over arrays
 
 // second set of defined arrays
 // common elements are [1,4,5,566]
+// note: repeating 4 is not displayed
 
 var arr1 = [1, 3, 4, 4, 5, 43, 67, 98, 566, 678];
 var arr2 = [1, 4, 4, 5, 23, 34, 76, 87, 132, 566, 665];
