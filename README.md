@@ -10,6 +10,14 @@ Clone the repository
 
 ## Operation
 
-`locate.js` contain two defined arrays which have been used to test the code.
+`locate.js` contains defined arrays.
+
+These arrays have been hard coded in order to get a minimum viable product (MVP).
 
 `container.html` has been created to run the program within a browser.
+
+## Next Steps
+
+- Allow users to enter arrays
+- Setup build script
+- Setup unit tests
